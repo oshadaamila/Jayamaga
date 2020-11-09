@@ -2,44 +2,61 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
-    title: 'Flutter Tutorial',
+    title: 'Shishyathwa Jayamaga',
     home: TutorialHome(),
   ));
 }
 
 class TutorialHome extends StatelessWidget {
-
-  MyButton button;
   @override
   Widget build(BuildContext context) {
     // Scaffold is a layout for the major Material Components.
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(Icons.menu),
-          tooltip: 'Navigation menu',
-          onPressed: null,
-        ),
-        title: Text('Example title'),
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.search),
-            tooltip: 'Search',
+        appBar: AppBar(
+          leading: IconButton(
+            icon: Icon(Icons.menu),
+            tooltip: 'Navigation menu',
             onPressed: null,
           ),
-        ],
-      ),
-      // body is the majority of the screen.
-      body: Center(
-        child:Text('Hello, world!')
-
-      ),
-      floatingActionButton: FloatingActionButton(
-        tooltip: 'Add', // used by assistive technologies
-        child: Icon(Icons.add),
-        onPressed: null,
-      ),
-    );
+          title: Text('Shishyathwa Jayamaga'),
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(Icons.search),
+              tooltip: 'Search',
+              onPressed: null,
+            ),
+          ],
+        ),
+        // body is the majority of the screen.
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Container(
+                height: 175,
+                child: Card(
+                    child: Center(
+                  child: Text("Grade 03",
+                      style: TextStyle(
+                          fontSize: 40.0, fontWeight: FontWeight.bold)),
+                ))),
+            Container(
+                height: 175,
+                child: Card(
+                    child: Center(
+                  child: Text("Grade 04",
+                      style: TextStyle(
+                          fontSize: 40.0, fontWeight: FontWeight.bold)),
+                ))),
+            Container(
+                height: 175,
+                child: Card(
+                    child: Center(
+                  child: Text("Grade 05",
+                      style: TextStyle(
+                          fontSize: 40.0, fontWeight: FontWeight.bold)),
+                )))
+          ],
+        ));
   }
 }
 
