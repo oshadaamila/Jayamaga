@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:jayamaga/models/User.dart';
-import 'package:jayamaga/screens/authenticate/SignIn.dart';
+import 'package:jayamaga/screens/authenticate/Authenticate.dart';
 import 'package:jayamaga/screens/home/home.dart';
 import 'package:provider/provider.dart';
 
@@ -9,7 +9,7 @@ class Welcome extends StatelessWidget {
   Widget build(BuildContext context) {
     final user = Provider.of<User>(context);
     if (user == null) {
-      return SignIn();
+      return Authenticate();
     } else {
       return Home();
     }

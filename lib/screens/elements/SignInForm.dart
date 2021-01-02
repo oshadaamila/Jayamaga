@@ -4,6 +4,11 @@ import 'package:jayamaga/shared/constants.dart';
 import 'package:jayamaga/shared/loading.dart';
 
 class SignInForm extends StatefulWidget {
+
+  final Function toggleView;
+
+  const SignInForm({Key key, this.toggleView}) : super(key: key);
+
   @override
   _SignInFormState createState() => _SignInFormState();
 }
@@ -76,13 +81,14 @@ class _SignInFormState extends State<SignInForm> {
                               });
                             }
                           }
-                        }
-                       ),
+                        }),
                     SizedBox(height: 12.0),
                     Text(
                       error,
                       style: TextStyle(color: Colors.red, fontSize: 14.0),
                     ),
+                    InkWell(
+                        onTap: () {widget.toggleView();}, child: Text("New User? Register Here"))
                   ],
                 ),
               ),
